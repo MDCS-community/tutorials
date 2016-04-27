@@ -1,0 +1,71 @@
+=========================================================== INSTALLATION
+(1)
+mkdir data
+mkdir data/db
+
+(2) change the path in file conf/mongodb.conf
+EX:
+dbPath: /home/snl3/Documents/data/MDCS/MDCS-stable/data/db
+
+
+(3) install mongodb(3.X)
+sudo apt-get install mongodb-org
+
+
+(4) required python libraries
+pip install Django==1.7 (https://docs.djangoproject.com/en/1.7/)
+pip install mongoengine==0.8.7 (http://mongoengine.org/)
+pip install djangorestframework==2.3.13 (http://www.django-rest-framework.org/)
+pip install django-oauth-toolkit==0.8.0 (https://django-oauth-toolkit.readthedocs.org/en/latest/)
+pip install django-rest-framework-mongoengine==1.3 (https://pypi.python.org/pypi/django-rest-framework-mongoengine)
+pip install django-rest-swagger==0.1.14 (http://django-rest-swagger.readthedocs.org/en/latest/)
+pip install xlrd==0.9.3 (https://pypi.python.org/pypi/xlrd)
+pip install xmltodict==0.8.7 (https://github.com/martinblech/xmltodict)
+pip install lxml==3.4.1 (http://lxml.de/)
+pip install python-dateutil==2.2 (https://pypi.python.org/pypi/python-dateutil)
+pip install requests==2.3.0 (http://docs.python-requests.org/en/latest/)
+pip install pymongo==2.8 (https://api.mongodb.org/python/current/)
+
+sudo apt-get install libpq-dev python-dev
+pip install psycopg2 (https://pypi.python.org/pypi/psycopg2)
+
+
+=========================================================== SETUP
+(5)
+mongod --config conf/mongodb.conf
+
+mongo
+use admin
+db.createUser(
+{
+user: "admin",
+pwd: "admin",
+roles: [ { role: "userAdminAnyDatabase", db: "admin"},"backup","restore"]
+}
+)
+exit
+ 
+mongo --port 27017 -u "admin" -p "admin" --authenticationDatabase admin
+use mgi
+db.createUser(
+{
+user: "mgi_user",
+pwd: "mgi_password",
+roles: ["readWrite"]
+}
+)
+exit
+
+
+(6)
+python manage.py migrate
+python manage.py createsuperuser
+
+
+=========================================================== RUN
+(1) mongod --config conf/mongodb.conf
+
+(2) python manage.py runserver
+
+(3) python -mwebbrowser http://127.0.0.1:8000
+

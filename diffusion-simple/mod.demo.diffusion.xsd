@@ -523,7 +523,7 @@
   <xsd:complexType name="ImageType">
     <xsd:sequence>
       <xsd:element name="fileExtension" type="xsd:string"/>
-      <xsd:element name="reference" type="xsd:anyURI"/>
+      <xsd:element xmlns:ns0="http://mdcs.ns" name="reference" type="xsd:anyURI" ns0:_mod_mdcs_="/curator/blob-hoster"/>
     </xsd:sequence>
   </xsd:complexType>
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
