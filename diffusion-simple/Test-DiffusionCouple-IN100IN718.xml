@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<experiment>
+    <experimentType>
+        <chemicalDiffusivity>
+            <material>
+                <materialName>IN100</materialName>
+               
+            </material>
+            <material>
+                <materialName>IN718</materialName>
+                <phase>
+                    <name>FCC</name>
+                    <crystalStructure/>
+                </phase>
+                <Composition>
+                    <quantityUnit>mass percent</quantityUnit>
+                    <constituents>
+                        <constituent>
+                            <element>Ni</element>
+                            <quantity>53</quantity>
+                            <purity>0.999</purity>
+                            <error>0.001</error>
+                        </constituent>
+                        <constituent>
+                            <element>Cr</element>
+                            <quantity>19</quantity>
+                            <purity>0.999</purity>
+                            <error>0.001</error>
+                        </constituent>
+                        <constituent>
+                            <element>Fe</element>
+                            <quantity>18.5</quantity>
+                            <purity>0.999</purity>
+                            <error>0.001</error>
+                        </constituent>
+                        <constituent>
+                            <element>Al</element>
+                            <quantity>0.5</quantity>
+                            <purity>0.999</purity>
+                            <error>0.001</error>
+                        </constituent>
+                        <constituent>
+                            <element>Mo</element>
+                            <quantity>3</quantity>
+                            <purity>0.999</purity>
+                            <error>0.001</error>
+                        </constituent>
+                        <constituent>
+                            <element>Nb</element>
+                            <quantity>5.1</quantity>
+                            <purity>0.999</purity>
+                            <error>0.001</error>
+                        </constituent>
+                        <constituent>
+                            <element>Ti</element>
+                            <quantity>0.9</quantity>
+                            <purity>0.999</purity>
+                            <error>0.001</error>
+                        </constituent>
+                    </constituents>
+                    <materialForm>
+                        <polycrystalline>
+                            <averageGrainSize>150</averageGrainSize>
+                            <length>micrometer</length>
+                        </polycrystalline>
+                    </materialForm>
+                </Composition>
+            </material>
+            <experimentalConditions>
+                <measurementConditions>
+                    <time>
+                        <duration>1000</duration>
+                        <unit>hours</unit>
+                    </time>
+                    <temperature>
+                        <temperature>1150</temperature>
+                        <unit>Celsius</unit>
+                    </temperature>
+                </measurementConditions>
+                <environment>
+                    <environment>inert</environment>
+                </environment>
+            </experimentalConditions>
+            <samplePreparations>
+                <sampleGeometry>
+                    <geometry>
+                        <MaterialName>IN100</MaterialName>
+                        <geometry>7 x 7 x 25 mm</geometry>
+                    </geometry>
+                    <geometry>
+                        <MaterialName>IN718</MaterialName>
+                        <geometry>7 x 7 x 25</geometry>
+                    </geometry>
+                </sampleGeometry>
+                <samplePreparationProcedure>
+                    <procedureName>Diffusion multiple assembl</procedureName>
+                    <procedureDescription>All of the sample pieces were cut using electro-discharge
+                        machining (EDM). The cut surfaces were then sand blasted with alumina
+                        particles under compressed air and cleaned using 600 grit SiC grinding paper
+                        to remove the EDM surface layer. Both diffusion multiples consisted of an
+                        outside cylinder of Rene´-88. The diffusion multiples were sealed by
+                        electron beam welding two Rene´-88 disks, 25 mm in diameter and 3 mm in
+                        height on the top and bottom of each cylinder.</procedureDescription>
+                </samplePreparationProcedure>
+                <samplePreparationProcedure>
+                    <procedureName>HIP'ing</procedureName>
+                    <procedureDescription>HIP at 140 MPa, 1150 °C for 4 h</procedureDescription>
+                </samplePreparationProcedure>
+                <samplePreparationProcedure>
+                    <procedureName>Diffusion anneal</procedureName>
+                    <procedureDescription>encapsulated in an evacuated quartz tube and backfilled
+                        with argon. Annealed at 1150 C and water quenched</procedureDescription>
+                </samplePreparationProcedure>
+                <samplePreparationProcedure>
+                    <procedureName>Metallographic preparation</procedureName>
+                    <procedureDescription>The diffusion multiples were cut into two halves in a
+                        parallel orientation to the end cap disks. The cut surfaces were ground and
+                        polished</procedureDescription>
+                </samplePreparationProcedure>
+            </samplePreparations>
+            <measurement>
+                <type>Composition profiles</type>
+                <experimentalMethod>
+                    <direct>
+                        <EPMA>
+                            <EPMAInstrumentBrand>CAMECA</EPMAInstrumentBrand>
+                        </EPMA>
+                    </direct>
+                </experimentalMethod>
+                <dataCollectionMethod/>
+            </measurement>
+            
+            <dataAnalysis>
+                
+            </dataAnalysis>
+        </chemicalDiffusivity>
+    </experimentType>
+    <id>85</id>
+    <citation>
+        <DOI>
+            <DOI>doi:10.1016/j.msea.2005.07.016</DOI>
+        </DOI>
+    </citation>
+</experiment>
